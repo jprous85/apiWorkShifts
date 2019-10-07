@@ -57,7 +57,6 @@ func update (w http.ResponseWriter, r *http.Request) {
 
 	db.Model(&service).Where("id = ?", id).Update(&Service{
 		Name:      name,
-		CreatedAt: time.Time{},
 		UpdatedAt: time.Time{},
 	})
 
